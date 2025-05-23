@@ -30,7 +30,20 @@ class Student
 }
 
 public class StudentGradeTracker 
-{
+{   
+	private static void addStudent(Scanner scanner, ArrayList<Student> students) 
+	{
+        System.out.print("Enter student name: ");
+        String name = scanner.nextLine();
+        
+        System.out.print("Enter student grade: ");
+        double grade = scanner.nextDouble();
+        scanner.nextLine();
+        
+        students.add(new Student(name, grade));
+        System.out.println("Student added successfully!");
+    }
+	
     public static void main(String[] args) 
 	{
 
