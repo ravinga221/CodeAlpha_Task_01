@@ -58,6 +58,22 @@ public class StudentGradeTracker
         }
     }
 	
+	private static void calculateAverage(ArrayList<Student> students) 
+	{
+        if (students.isEmpty()) {
+            System.out.println("No students to calculate average.");
+            return;
+        }
+        
+        double sum = 0;
+        for (Student student : students) {
+            sum += student.getGrade();
+        }
+        
+        double average = sum / students.size();
+        System.out.printf("Class average grade: %.2f\n", average);
+    }
+	
     public static void main(String[] args) 
 	{
 
