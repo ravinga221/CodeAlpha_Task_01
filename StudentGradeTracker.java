@@ -44,6 +44,20 @@ public class StudentGradeTracker
         System.out.println("Student added successfully!");
     }
 	
+	private static void displayStudents(ArrayList<Student> students)
+	{
+        if (students.isEmpty()) {
+            System.out.println("No students in the system.");
+            return;
+        }
+        
+        System.out.println("\nStudent List:");
+        System.out.println("-------------");
+        for (Student student : students) {
+            System.out.println(student);
+        }
+    }
+	
     public static void main(String[] args) 
 	{
 
